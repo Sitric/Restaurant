@@ -1,5 +1,7 @@
 package com.sitric;
-
+/*
+* Поток, который имитирует заказ клиента через планшет
+* */
 import java.util.List;
 
 class RandomOrderGeneratorTask implements Runnable {

@@ -1,5 +1,7 @@
 package com.sitric;
-
+/*
+* Вспомогательный класс для работы с консолью
+*/
 import com.sitric.kitchen.Dish;
 
 import java.io.BufferedReader;

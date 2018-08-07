@@ -2,7 +2,6 @@ package com.sitric.ad;
 
 /*
     Рекламное объявление
-
  */
 
 public class Advertisement {

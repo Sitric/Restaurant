@@ -1,12 +1,15 @@
 package com.sitric.kitchen;
 
+/*
+* Класс-поток "Повар"
+*/
 
 import com.sitric.statistic.StatisticManager;
 import com.sitric.statistic.event.CookedOrderEventDataRow;
 
 import java.util.Observable;
 import java.util.concurrent.LinkedBlockingQueue;
-
+// Observable — интерфейс, определяющий методы для добавления, удаления и оповещения наблюдателей
 public class Cook extends Observable implements Runnable{
     private LinkedBlockingQueue<Order> queue;
 
@@ -38,6 +41,7 @@ public class Cook extends Observable implements Runnable{
     public void startCookingOrder(Order order) {
         busy = true;
         try {
+            // регистрация события "заказ готов"
             CookedOrderEventDataRow event =
                     new CookedOrderEventDataRow(order.getTablet().toString(), name, order.getTotalCookingTime()*60, order.getDishes());
             StatisticManager.getInstance().register(event);
@@ -60,6 +64,7 @@ public class Cook extends Observable implements Runnable{
             }
             else {
                 try {
+                    // смотрим каждые 10мс освободился ли какой-нибудь из поваров
                     Thread.sleep(10);
                 } catch (InterruptedException e)
                 {

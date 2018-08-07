@@ -49,7 +49,7 @@ public class Restaurant {
         catch (InterruptedException e){}
         t.interrupt();
 
-        //Statistics for director
+        //Статистика для директора
         DirectorTablet directorTablet = new DirectorTablet();
 
         directorTablet.printAdvertisementProfit();

@@ -1,5 +1,7 @@
 package com.sitric.kitchen;
-
+/*
+* Класс "Блюда" enum, формат: название: время приготовление
+*/
 import java.util.Arrays;
 
 public enum Dish {

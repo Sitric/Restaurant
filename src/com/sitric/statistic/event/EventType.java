@@ -1,5 +1,9 @@
 package com.sitric.statistic.event;
 
+/*
+* Типы событий
+*/
+
 public enum EventType {
     COOKED_ORDER,           //*повар приготовил заказ
     SELECTED_VIDEOS,        //*выбрали набор видео-роликов для заказа

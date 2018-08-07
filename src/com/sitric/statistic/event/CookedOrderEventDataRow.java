@@ -8,6 +8,7 @@ import java.util.List;
 /*
     Заказ готов
  */
+
 public class CookedOrderEventDataRow implements EventDataRow{
     private String tabletName;
     private String cookName;

@@ -1,5 +1,8 @@
 package com.sitric.statistic;
-
+/*
+* С его помощью будем регистрировать события в хранилище.
+* Singleton
+* */
 import com.sitric.kitchen.Cook;
 import com.sitric.statistic.event.CookedOrderEventDataRow;
 import com.sitric.statistic.event.EventDataRow;
@@ -24,7 +27,7 @@ public class StatisticManager {
     public void register(EventDataRow data) {
         statisticStorage.put(data);
     }
-
+    // статистика загруженности поваров по дням
     public TreeMap<Date, TreeMap<String, Integer>> getCookWorkload() {
         List<EventDataRow> cookWorkList = statisticStorage.getStorage().get(EventType.COOKED_ORDER);
         TreeMap<Date, TreeMap<String, Integer>> workPerDay = new TreeMap<>(Collections.reverseOrder());

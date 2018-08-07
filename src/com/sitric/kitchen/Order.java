@@ -1,5 +1,7 @@
 package com.sitric.kitchen;
-
+/*
+* Класс "Заказ"
+*/
 import com.sitric.ConsoleHelper;
 import com.sitric.Tablet;
 

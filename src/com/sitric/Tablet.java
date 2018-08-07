@@ -1,5 +1,9 @@
 package com.sitric;
 
+/*
+* Класс планшета, через который заказ поступает повару
+*/
+
 import com.sitric.ad.AdvertisementManager;
 import com.sitric.ad.NoVideoAvailableException;
 import com.sitric.kitchen.Order;
@@ -38,7 +42,7 @@ public class Tablet  {
             return;
         }
     }
-
+    // заносит заказ в очередь и запускает рекламу
     private void insideOrder(Order newOrder) throws IOException {
         if (newOrder.isEmpty()) return;
         ConsoleHelper.writeMessage(newOrder.toString());
@@ -50,7 +54,7 @@ public class Tablet  {
             logger.log(Level.INFO, "No video is available for the order " + newOrder);
         }
     }
-
+    // случайным образом генерирует заказы
     public void createTestOrder() {
         try {
             final Order newOrder = new TestOrder(this);

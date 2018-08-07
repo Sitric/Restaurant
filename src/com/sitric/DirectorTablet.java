@@ -1,5 +1,7 @@
 package com.sitric;
-
+/*
+* Планшет директора
+* */
 import com.sitric.ad.Advertisement;
 import com.sitric.ad.StatisticAdvertisementManager;
 import com.sitric.statistic.StatisticManager;
@@ -25,7 +27,7 @@ public class DirectorTablet {
         ConsoleHelper.writeMessage(String.format(Locale.ENGLISH, "Total - %.2f", 0.01d * totalAmmout));
     }
 
-
+    // загрузка поваров
     public void printCookWorkloading() {
         TreeMap<Date, TreeMap<String, Integer>> cooksWorkload = StatisticManager.getInstance().getCookWorkload();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
